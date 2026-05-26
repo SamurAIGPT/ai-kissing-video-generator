@@ -6,7 +6,7 @@
 
 **GitHub Repository:** [github.com/SamurAIGPT/ai-kissing-video-generator](https://github.com/SamurAIGPT/ai-kissing-video-generator)
 
-**Live Demo Preview:** _Deploying soon!_
+**Live Demo Preview:** [ai-kissing-video-generator-amber.vercel.app](https://ai-kissing-video-generator-amber.vercel.app/)
 
 ---
 

@@ -1,7 +1,7 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import { Providers } from "@/components/Providers";
-import { Navbar } from "@/components/saas/Navbar";
+import { Providers } from "./providers";
+import Navbar from "../components/Navbar";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -13,10 +13,14 @@ export const metadata = {
   keywords: ["ai kissing generator", "kissing video generator", "veo 3.1 image to video", "wan 2.7 image to video", "gemini omni video", "grok imagine video", "saas templates"],
 };
 
+import config from "@/lib/config";
+
 export default function RootLayout({ children }) {
+  const theme = config?.theme || "slate-indigo";
+
   return (
-    <html lang="en" className="h-full w-full dark" style={{ colorScheme: 'dark' }}>
-      <body className={`${outfit.className} h-full w-full flex flex-col antialiased bg-zinc-950 text-zinc-100`}>
+    <html lang="en" className="h-full w-full" data-theme={theme}>
+      <body className={`${outfit.className} h-full w-full flex flex-col antialiased bg-bg-page text-primary-text`}>
         <Providers>
           <Navbar />
           <div className="flex-1 flex flex-col overflow-hidden">

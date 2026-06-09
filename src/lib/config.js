@@ -3,6 +3,7 @@
  */
 
 const config = {
+  appName: "Ai Kissing Video Generator",
   auth: {
     google: {
       clientId: process.env.GOOGLE_CLIENT_ID,

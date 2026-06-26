@@ -1,9 +1,15 @@
-import { Outfit } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Navbar from "../components/Navbar";
 
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
 const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
 });
 
@@ -20,7 +26,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className="h-full w-full" data-theme={theme}>
-      <body className={`${outfit.className} h-full w-full flex flex-col antialiased bg-bg-page text-primary-text`}>
+      <body className={`${inter.variable} ${outfit.variable} h-full w-full flex flex-col antialiased bg-bg-page text-primary-text font-sans`}>
         <Providers>
           <Navbar />
           <div className="flex-1 flex flex-col overflow-hidden">
